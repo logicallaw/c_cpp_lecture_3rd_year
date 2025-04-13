@@ -21,3 +21,8 @@
     ```bash
     ./runner
     ```
+
+5. Etc./ shortcut command:
+   ```
+   cmake .. && make && ./runner
+   ```
