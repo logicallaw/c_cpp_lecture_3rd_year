@@ -3,4 +3,4 @@ project(lecture_algorithm)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(runner main.cpp)
+add_executable(runner sorting/insertion_sort.cpp)
