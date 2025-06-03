@@ -3,6 +3,22 @@ project(c_cpp_lecture_3rd_year)
 
 set(CMAKE_CXX_STANDARD 14)
 
+# Race Condition 문제
+add_executable(RaceCondition lecture_operating_system/race_condition.c)
+target_link_libraries(RaceCondition pthread)
+
+# Producer/Consumer Solution
+add_executable(Producer_Consumer_Sol lecture_operating_system/producer_consumer_sol.c)
+target_link_libraries(Producer_Consumer_Sol pthread)
+
+# Readers/Writers - Reader Preference
+add_executable(Readers_Writers_Reader_Preference lecture_operating_system/readers_writers_reader_preference.c)
+target_link_libraries(Readers_Writers_Reader_Preference pthread)
+
+# Readers/Writers - Writer Preference
+add_executable(Readers_Writers_Writer_Preference lecture_operating_system/readers_writers_writer_preference.c)
+target_link_libraries(Readers_Writers_Writer_Preference pthread)
+
 # 식사하는 철학자 문제(Deadlock 발생 버전)
 add_executable(Dining_Philosophers lecture_operating_system/dining_philosophers.c)
 target_link_libraries(Dining_Philosophers pthread)
