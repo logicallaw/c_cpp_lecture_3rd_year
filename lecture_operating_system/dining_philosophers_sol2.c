@@ -5,8 +5,7 @@
 
 /*
 Solution 2:
-Deadlock Prevention의 방법 중 하나인 No Hold and Wait으로 Deadlock condition
-예방.
+Deadlock Prevention의 방법 중 하나인 No Hold and Wait으로 Hold and Wait을 방지.
 */
 
 sem_t forks[NUM]; // forks. 공유자원임. 이 문제에선 Binary Semaphore를 나타냄.

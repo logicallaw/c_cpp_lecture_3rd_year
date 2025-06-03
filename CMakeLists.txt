@@ -14,3 +14,7 @@ target_link_libraries(Dining_Philosophers_Sol1 pthread)
 # 식사하는 철학자 문제(Deadlock Prevention - No Hold and Wait)
 add_executable(Dining_Philosophers_Sol2 lecture_operating_system/dining_philosophers_sol2.c)
 target_link_libraries(Dining_Philosophers_Sol2 pthread)
+
+# 식사하는 철학자 문제(Deadlock Prevention - Resource ordering)
+add_executable(Dining_Philosophers_Sol3 lecture_operating_system/dining_philosophers_sol3.c)
+target_link_libraries(Dining_Philosophers_Sol3 pthread)
