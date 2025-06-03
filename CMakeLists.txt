@@ -3,4 +3,6 @@ project(c_cpp_lecture_3rd_year)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(C_CPP_LECTURE_3RD_YEAR os.c)
+# 식사하는 철학자 문제(Deadlock 발생 버전)
+add_executable(Dining_Philosophers lecture_operating_system/dining_philosophers.c)
+target_link_libraries(Dining_Philosophers pthread)

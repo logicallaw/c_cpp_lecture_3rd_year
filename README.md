@@ -17,12 +17,12 @@
    make
    ```
 
-4. Execute the program:
+4. Execute the program(example: Dining_Philosophers) :
     ```bash
-    ./runner
+    ./Dining_Philosophers
     ```
 
 5. Etc./ shortcut command:
    ```
-   cmake .. && make && ./runner
+   cmake .. && make && ./Dining_Philosophers
    ```
