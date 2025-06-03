@@ -3,7 +3,13 @@
 #include <stdio.h>
 #define NUM 5
 
+/*
+Sol1:
+철학자 4명만 한 방에 들어가도록 제약을 걸어서, Circular Wait을 제거함.
+*/
+
 sem_t forks[NUM]; // forks. 공유자원임. 이 문제에선 Binary Semaphore를 나타냄.
+sem_t room;
 
 void pickup(int philosopher_num) { sem_wait(&forks[philosopher_num % NUM]); }
 
@@ -24,6 +30,7 @@ void *philosopher(void *arg) {
   philosopher_num = (unsigned long int)arg;
 
   while (1) {
+    sem_wait(&room);
     pickup(philosopher_num);
     printf("philosopher %d picks up the fork %d.\n", philosopher_num,
            philosopher_num);
@@ -39,6 +46,7 @@ void *philosopher(void *arg) {
     putdown(philosopher_num + 1);
     printf("philosopher %d puts down the fork %d.\n", philosopher_num,
            philosopher_num);
+    sem_post(&room);
 
     thinking(philosopher_num);
   }
@@ -56,6 +64,8 @@ int main() {
     // 즉, 포크 1개를 사용할 수 있다는 의미다.
     sem_init(&forks[i], 0, 1);
   }
+
+  sem_init(&room, 0, 4);
 
   for (unsigned long int i = 0; i < NUM; i++) {
     pthread_create(&threads[i], NULL, philosopher, (void *)i);
