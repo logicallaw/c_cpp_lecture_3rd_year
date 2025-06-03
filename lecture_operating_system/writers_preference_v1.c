@@ -26,12 +26,6 @@ int main() {
 
   pthread_join(tid1, NULL);
   pthread_join(tid2, NULL);
-
-  if (x != 0) {
-    printf("BOOM! counter=%d\n", x);
-  } else {
-    printf("OK counter=%d\n", x);
-  }
 }
 
 /* thread routin */

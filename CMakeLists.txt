@@ -12,12 +12,16 @@ add_executable(Producer_Consumer_Sol lecture_operating_system/producer_consumer_
 target_link_libraries(Producer_Consumer_Sol pthread)
 
 # Readers/Writers - Reader Preference
-add_executable(Readers_Writers_Reader_Preference lecture_operating_system/readers_writers_reader_preference.c)
-target_link_libraries(Readers_Writers_Reader_Preference pthread)
+add_executable(ReadersPreference lecture_operating_system/readers_preference.c)
+target_link_libraries(ReadersPreference pthread)
 
 # Readers/Writers - Writer Preference
-add_executable(Readers_Writers_Writer_Preference lecture_operating_system/readers_writers_writer_preference.c)
-target_link_libraries(Readers_Writers_Writer_Preference pthread)
+add_executable(WritersPreferenceV1 lecture_operating_system/writers_preference_v1.c)
+target_link_libraries(WritersPreferenceV1 pthread)
+
+# Readers/Writers - Writer Preference considering coner case.
+add_executable(WritersPreferenceV2 lecture_operating_system/writers_preference_considering_coner_case_v2.c)
+target_link_libraries(WritersPreferenceV2 pthread)
 
 # 식사하는 철학자 문제(Deadlock 발생 버전)
 add_executable(Dining_Philosophers lecture_operating_system/dining_philosophers.c)
