@@ -17,7 +17,7 @@
    make
    ```
 
-4. Execute the program(example: Dining_Philosophers) :
+4. Run the executable (e.g., Dining_Philosophers):
     ```bash
     ./Dining_Philosophers
     ```
