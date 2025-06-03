@@ -1,4 +1,4 @@
-# 25-1 Algorithm Lecture
+# 25-1학기 3학년 C/C++ 강의
 
 ## Build and Run Instructions
 
