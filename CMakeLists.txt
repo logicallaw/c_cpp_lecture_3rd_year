@@ -38,3 +38,7 @@ target_link_libraries(Dining_Philosophers_Sol2 pthread)
 # 식사하는 철학자 문제(Deadlock Prevention - Resource ordering)
 add_executable(Dining_Philosophers_Sol3 lecture_operating_system/dining_philosophers_sol3.c)
 target_link_libraries(Dining_Philosophers_Sol3 pthread)
+
+# Producer/Consumer - Bounded Buffer Problem
+add_executable(BoundedBufferProblem lecture_operating_system/producer_consumer_bounded_buffer_problem.c)
+target_link_libraries(BoundedBufferProblem pthread)
